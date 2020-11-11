@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+
 const GlobalStyle = createGlobalStyle`
   :root {
     --primary: #F8B52F;
@@ -18,8 +19,8 @@ const GlobalStyle = createGlobalStyle`
   html,body {
     padding: 0;
     margin: 0;
-    background: red;
   }
 `
 
-export default GlobalStyle;
+export default GlobalStyle
+

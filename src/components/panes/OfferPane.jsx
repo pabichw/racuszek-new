@@ -1,10 +1,7 @@
 import React from 'react';
-import Fade from "react-reveal";
-import Button from "../Button";
-import ScrollIncent from "../ScrollIncent";
 import styled from "styled-components";
 import {BREAKPOINTS, NAV} from "../../utils/styling";
-import Pane from "../Page";
+import Pane from "../Pane";
 
 const OfferPane = () => {
     return (

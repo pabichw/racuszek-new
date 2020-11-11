@@ -1,6 +1,5 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {useScroll} from "../utils/hooks";
 
 const Pane = ({children, customStyle, id}) => {
   return (
