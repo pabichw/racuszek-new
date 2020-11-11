@@ -1,0 +1,13 @@
+.fadein {
+    transition: opacity 500ms;
+}
+
+.fadein-enter,
+.fadein-leave {
+    opacity: 1;
+}
+
+.fadein-leave,
+.fadein-enter {
+    opacity: 0;
+}

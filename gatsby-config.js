@@ -21,8 +21,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
         url:
-          process.env.WPGRAPHQL_URL ||
-          `https://dev-gatsby-source-wordpress-v4.pantheonsite.io/graphql`,
+          `http://memesat.work/przyklad1-cms/graphql`,
         verbose: true,
         develop: {
           hardCacheMediaFiles: true,
@@ -44,7 +43,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-chakra-ui`,
     `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-plugin-react-svg",
@@ -55,5 +53,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cache`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+
+      options: {
+        custom: {
+          families: ["LilyScriptOne, Montserrat, MontserratBold"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-anchor-links`
   ],
 }

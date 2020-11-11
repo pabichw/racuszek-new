@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import { Menu, Button, Grid, Box } from "@chakra-ui/core"
 import { normalizePath } from "../utils/get-url-path"
 
 export default () => {
@@ -27,30 +26,26 @@ export default () => {
   `)
 
   return !!wpMenu && !!wpMenu.menuItems && !!wpMenu.menuItems.nodes ? (
-    <Box mb={10} style={{ maxWidth: `100%` }}>
-      <Menu>
-        <Grid autoFlow="column">
-          {wpMenu.menuItems.nodes.map((menuItem, i) => {
-            if (menuItem.parentId) {
-              return null
-            }
+    <div>
+      {wpMenu.menuItems.nodes.map((menuItem, i) => {
+        if (menuItem.parentId) {
+          return null
+        }
 
-            const path = menuItem?.connectedNode?.node?.uri ?? menuItem.url
+        const path = menuItem?.connectedNode?.node?.uri ?? menuItem.url
 
-            return (
-              <Link
-                key={i + menuItem.url}
-                style={{ display: `block` }}
-                to={normalizePath(path)}
-              >
-                <Button w="100%" as={Button}>
-                  {menuItem.label}
-                </Button>
-              </Link>
-            )
-          })}
-        </Grid>
-      </Menu>
-    </Box>
+        return (
+          <Link
+            key={i + menuItem.url}
+            style={{ display: `block` }}
+            to={normalizePath(path)}
+          >
+            <button>
+              {menuItem.label}
+            </button>
+          </Link>
+        )
+      })}
+    </div>
   ) : null
 }
