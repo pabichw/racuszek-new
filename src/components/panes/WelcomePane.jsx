@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react"
 import Fade from "react-reveal";
 import Button from "../Button";
 import ScrollIncent from "../ScrollIncent";

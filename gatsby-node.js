@@ -9,7 +9,6 @@ const getTemplates = () => {
   return glob.sync(`./src/templates/**/*.js`, { cwd: sitePath })
 }
 
-//
 // @todo move this to gatsby-theme-wordpress
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const templates = getTemplates()
@@ -67,39 +66,30 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   )
 
   // create the homepage
-  const {
-    data: { allWpPost },
-  } = await graphql(/* GraphQL */ `
-    {
-      allWpPost(sort: { fields: modifiedGmt, order: DESC }) {
-        nodes {
-          uri
-          id
-        }
-      }
-    }
-  `)
+  // const {
+  //   data: { allWpPost },
+  // } = await graphql(/* GraphQL */ `
+  //   {
+  //     wpPage(title: {eq: "GLOWNA"}) {
+  //       id
+  //       title
+  //       content
+  //     }
+  //   }
+  // `)
+  //
+  // const perPage = 10
+  // const chunkedContentNodes = chunk(allWpPost.nodes, perPage)
 
-  const perPage = 10
-  const chunkedContentNodes = chunk(allWpPost.nodes, perPage)
-
-  await Promise.all(
-    chunkedContentNodes.map(async (nodesChunk, index) => {
-      const firstNode = nodesChunk[0]
-      const page = index + 1
-      const offset = perPage * index
-
+  // await Promise.all(
+  //   chunkedContentNodes.map(async (nodesChunk, index) => {
       await actions.createPage({
-        component: resolve(`./src/templates/index.js`),
-        path: page === 1 ? `/blog/` : `/blog/${page}/`,
+        component: resolve(`./src/pages/index.js`),
+        path: `/`,
         context: {
-          firstId: firstNode.id,
-          page: page,
-          offset: offset,
-          totalPages: chunkedContentNodes.length,
-          perPage,
+          content
         },
       })
-    })
-  )
+  //   })
+  // )
 }

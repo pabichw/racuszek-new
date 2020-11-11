@@ -3,11 +3,13 @@ import styled from "styled-components";
 import {BREAKPOINTS, NAV} from "../../utils/styling";
 import Pane from "../Pane";
 
-const ContactPane = () => {
+const ContactPane = ({page}) => {
+  const { content, title } = page
   return (
     <Pane id='contact' customStyle={`background: var(--bckgPrimary);`}>
       <Content>
-          <Title>Hello</Title>
+          <Title>{title}</Title>
+          <p dangerouslySetInnerHTML={ {__html :content}}/>
       </Content>
     </Pane>
   );
@@ -15,6 +17,7 @@ const ContactPane = () => {
 
 const Content = styled.header`
   display: flex;
+  flex-direction: column;
   position: relative;
   justify-content: center;
   align-items: center;
