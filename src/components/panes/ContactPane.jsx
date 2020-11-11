@@ -9,7 +9,7 @@ const ContactPane = ({page}) => {
     <Pane id='contact' customStyle={`background: var(--bckgPrimary);`}>
       <Content>
           <Title>{title}</Title>
-          <p dangerouslySetInnerHTML={ {__html : `<div>${content}</div>`}}/>
+          <div dangerouslySetInnerHTML={ {__html : content}}/>
       </Content>
     </Pane>
   );
