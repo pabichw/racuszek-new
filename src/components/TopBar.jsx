@@ -27,7 +27,8 @@ const CallWrapper = styled.div`
 
 const CallText = styled.p`
   font-size: 14px;
-  font-family: MontserratBold;
+  font-family: 'Montserrat';
+  font-weight: bold;
 `;
 
 const PhoneWrap = styled.div`
@@ -92,7 +93,7 @@ const TopBar = () => {
         </Menu>
       </MobileToggle>
     </>
-    
+
   );
 };
 
@@ -150,7 +151,8 @@ const Option = styled.li`
   height: 23px;
   
   & > a {
-    font-family: MontserratBold;
+    font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 16px;
     color: #000;
     text-decoration: none;

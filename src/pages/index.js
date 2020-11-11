@@ -77,13 +77,12 @@ import ContactPane from "../components/panes/ContactPane"
 // )
 
 export default function Home({data: {allWpPage: {nodes: pages}}}) {
-  console.log('pages', pages);
-  const mainPage = pages.find(p => p.title === "GLOWNA")
-  const contactPage = pages.find(p => p.title === "Kontakt")
+  const mainPage = pages?.find(p => p.title === "Glowna")
+  const contactPage = pages?.find(p => p.title === "Kontakt")
 
   return (
     <Layout>
-      <WelcomePane/>
+      <WelcomePane page={mainPage}/>
       <OfferPane/>
       <ContactPane page={contactPage}/>
     </Layout>
@@ -92,7 +91,7 @@ export default function Home({data: {allWpPage: {nodes: pages}}}) {
 
 export const query = graphql`
   query HomePage {
-    allWpPage(filter: {title: {regex: "/GLOWNA|Kontakt/"}}) {
+    allWpPage(filter: {title: {regex: "/Glowna|Kontakt/"}}) {
       nodes {
         title
         content

@@ -24,11 +24,11 @@ import useScrollInfo from "react-element-scroll-hook";
 
 export default function Layout({ children }) {
   const [scrollInfo, setRef] = useScrollInfo();
-  console.log('scrollinfo', scrollInfo);
+  // console.log('scrollinfo', scrollInfo);
 
   // setProperSearch(scrollInfo.y.value)
   if (typeof window !== "undefined") {
-    console.log('scroll script loads up')
+    // console.log('scroll script loads up')
     require("smooth-scroll")('a[href*="#"]')
   }
 

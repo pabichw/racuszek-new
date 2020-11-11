@@ -61,7 +61,7 @@ module.exports = {
 
       options: {
         custom: {
-          families: ["LilyScriptOne, Montserrat, MontserratBold"],
+          families: ["LilyScriptOne, Montserrat"],
           urls: ["/fonts/fonts.css"],
         },
       },

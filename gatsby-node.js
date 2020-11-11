@@ -64,32 +64,4 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       })
     })
   )
-
-  // create the homepage
-  // const {
-  //   data: { allWpPost },
-  // } = await graphql(/* GraphQL */ `
-  //   {
-  //     wpPage(title: {eq: "GLOWNA"}) {
-  //       id
-  //       title
-  //       content
-  //     }
-  //   }
-  // `)
-  //
-  // const perPage = 10
-  // const chunkedContentNodes = chunk(allWpPost.nodes, perPage)
-
-  // await Promise.all(
-  //   chunkedContentNodes.map(async (nodesChunk, index) => {
-      await actions.createPage({
-        component: resolve(`./src/pages/index.js`),
-        path: `/`,
-        context: {
-          content
-        },
-      })
-  //   })
-  // )
 }

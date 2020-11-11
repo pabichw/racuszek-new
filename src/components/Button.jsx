@@ -28,7 +28,8 @@ const CustomButton = styled.button`
   justify-content: center;
   align-items: center;
   font-size: 28px;
-  font-family: MontserratBold;
+  font-family: 'Montserrat';
+  font-weight: bold;
   
   cursor: pointer;
   box-shadow: #000 0 2px 0 4px;

@@ -1,20 +1,27 @@
-import React, { useState } from "react"
+import React from "react"
 import Fade from "react-reveal";
 import Button from "../Button";
 import ScrollIncent from "../ScrollIncent";
 import styled from "styled-components";
 import {BREAKPOINTS, NAV} from "../../utils/styling";
 import Pane from "../Pane";
+import { tagContent } from "../../utils/regex";
+import { stripHTML } from "../../utils/other";
 
-const WelcomePane = () => {
+const WelcomePane = ({page}) => {
+    console.log('welcomepage', page);
+    let title, subtitle;
+    title = page?.content?.match(tagContent('h2'))[0]
+    subtitle = page?.content?.match(tagContent('p'))[0]
+
     return (
         <Pane id='welcome' customStyle={`background: linear-gradient(var(--bckgPrimary) 50%, var(--bckgPrimary) 100%);`}>
             <Content>
                 <Left>
                     <Fade left cascade>
                         <div>
-                            <Title>Wypieki to nasza pasja</Title>
-                            <Subtitle>Najlepsze wypieki w Łodzi<br/>Zapoznaj się z naszą ofertą poiniżej</Subtitle>
+                            <Title>{stripHTML(title)}</Title>
+                            <Subtitle>{stripHTML(subtitle)}</Subtitle>
                             <ButtonWrapper>
                                 <Button withArrowIcon>Zobacz</Button>
                             </ButtonWrapper>

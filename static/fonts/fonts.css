@@ -8,6 +8,7 @@
     src: url("Montserrat-Regular.ttf") format('truetype');
 }
 @font-face {
-    font-family: "MontserratBold";
+    font-family: "Montserrat";
     src: url("Montserrat-Bold.ttf") format('truetype');
+    font-weight: bold;
 }
