@@ -22,7 +22,7 @@ function BlogPost({ data }) {
         </div>
       )}
 
-      <p dangerouslySetInnerHTML={{ __html: content.replaceAll('<strong>', '').replaceAll('</strong>','') }} />
+      <p dangerouslySetInnerHTML={{ __html: content }} />
 
       <br />
       {!!nextPage && (
