@@ -1,18 +1,18 @@
 {
-  "name": "using-gatsby-source-wordpress-experimental",
-  "description": "Gatsby example site using gatsby-source-wordpress@next",
+  "name": "racuch-new",
+  "description": "Cms site using Gatsby on client-side",
   "license": "MIT",
   "version": "0.0.1",
   "author": {
-    "name": "Tyler",
-    "email": "tyler@gatsbyjs.com"
+    "name": "Wiktor Pabich",
+    "email": "pabichwiktor@gmail.com"
   },
   "scripts": {
     "develop": "gatsby develop",
     "clean": "gatsby clean",
     "build": "gatsby build",
     "clean-develop": "gatsby clean && gatsby develop",
-    "clean-build": "node -v && gatsby clean && gatsby build",
+    "clean-build": "node -v && yarn && gatsby clean && gatsby build",
     "start": "yarn develop",
     "serve": "gatsby serve"
   },
