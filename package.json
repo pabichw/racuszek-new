@@ -12,7 +12,7 @@
     "clean": "gatsby clean",
     "build": "gatsby build",
     "clean-develop": "gatsby clean && gatsby develop",
-    "clean-build": "node -v && yarn --verbose && gatsby clean && gatsby build",
+    "clean-build": "node -v && yarn --verbose",
     "start": "yarn develop",
     "serve": "gatsby serve"
   },
