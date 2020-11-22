@@ -56,12 +56,13 @@ typings/
 # dotenv environment variables file
 .env
 
+# next
+.next
 .cache
-public
+
 yarn-error.log
 .DS_Store
 .env.*
-!.env.GATSBY_CONCURRENT_DOWNLOAD
 .DS_Store
 
 .wordpress-cache

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import {AnchorLink} from "gatsby-plugin-anchor-links";
+import Link from 'next/Link';
 
 const ScrollIncent = () => {
   return (
     <Wrapper>
-      <AnchorLink to="#offer"><span/>Przewiń w dół</AnchorLink>
+      <Link href="#offer"><a><span/>Przewiń w dół</a></Link>
     </Wrapper>
   );
 };

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../components/Logo';
-import {animateUnderlineHover, BREAKPOINTS, NAV} from '../utils/styling';
+import { animateUnderlineHover, BREAKPOINTS, NAV } from "../utils/styling"
 import Fade from 'react-reveal/Fade';
-import { slide as Menu } from 'react-burger-menu'
-import {AnchorLink} from "gatsby-plugin-anchor-links";
+import { slide as Menu } from 'react-burger-menu';
+import Link from 'next/Link';
 
 const CallUs = () => (
   <CallWrapper>
@@ -57,19 +57,19 @@ const TopBar = () => {
           <Nav>
             <Options>
               <Option>
-                <AnchorLink to="#offer" title="Oferta"/>
+                <Link href="#offer"><a>Oferta</a></Link>
               </Option>
               <Option>
-                <AnchorLink to="#about-us" title="O Nas"/>
+                <Link href="#about-us"><a>O nas</a></Link>
               </Option>
               <LogoWrapper>
                 <Logo/>
               </LogoWrapper>
               <Option>
-                <AnchorLink to="#contact" title="Kontakt"/>
+                <Link href="#contact"><a>Kontakt</a></Link>
               </Option>
               <Option>
-                <AnchorLink to="#carrer" title="Praca"/>
+                <Link href="#carrer"><a>Praca</a></Link>
               </Option>
             </Options>
           </Nav>
@@ -79,16 +79,16 @@ const TopBar = () => {
       <MobileToggle>
         <Menu customBurgerIcon={ <BurgerIcon src={'images/menu.svg'} /> } width={ 280 } pageWrapId="page-wrap" >
           <MobileOption>
-            <AnchorLink to="#offer" title="Oferta"/>
+            <Link href="#offer"><a>Oferta</a></Link>
           </MobileOption>
           <MobileOption>
-            <AnchorLink to="#about-us" title="O Nas"/>
+            <Link href="#about-us"><a>O nas</a></Link>
           </MobileOption>
           <MobileOption>
-            <AnchorLink to="#contact" title="Kontakt"/>
+            <Link href="#contact"><a>Kontakt</a></Link>
           </MobileOption>
           <MobileOption>
-            <AnchorLink to="#carrer" title="Praca"/>
+            <Link href="#carrer"><a>Pracuj</a></Link>
           </MobileOption>
         </Menu>
       </MobileToggle>
