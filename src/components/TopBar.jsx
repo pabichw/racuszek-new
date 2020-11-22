@@ -4,7 +4,7 @@ import Logo from '../components/Logo';
 import { animateUnderlineHover, BREAKPOINTS, NAV } from "../utils/styling"
 import Fade from 'react-reveal/Fade';
 import { slide as Menu } from 'react-burger-menu';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const CallUs = () => (
   <CallWrapper>

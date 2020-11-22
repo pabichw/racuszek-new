@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from "./Logo";
 import CSSTransitionGroup from 'react-addons-css-transition-group';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const timeout = 500;
 
