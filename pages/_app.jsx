@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import React from "react"
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -20,7 +21,29 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+  
+  .fadein {
+    transition: opacity 500ms;
+  }
+  
+  .fadein-enter,
+  .fadein-leave {
+      opacity: 1;
+  }
+  
+  .fadein-leave,
+  .fadein-enter {
+      opacity: 0;
+  }
+
 `
 
-export default GlobalStyle
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  )
+}
 

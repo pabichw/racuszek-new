@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from "./Logo";
 import CSSTransitionGroup from 'react-addons-css-transition-group';
-import '../style/animations.css'
-import {AnchorLink} from "gatsby-plugin-anchor-links";
+import Link from 'next/Link';
+
 const timeout = 500;
 
 const Footer = ({scrolledToTop}) => (
@@ -15,11 +15,13 @@ const Footer = ({scrolledToTop}) => (
     >
       {!scrolledToTop && <Content>
         <div/>
-        <AnchorLink to="#">
-          <LogoWrapper>
-            <Logo white/>
-          </LogoWrapper>
-        </AnchorLink>
+        <Link href="#">
+          <a>
+            <LogoWrapper>
+              <Logo white/>
+            </LogoWrapper>
+          </a>
+        </Link>
       </Content>}
     </CSSTransitionGroup>
   </Container>
