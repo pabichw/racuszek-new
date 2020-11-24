@@ -1,4 +1,4 @@
-const API_ENDPOINT = "http://memesat.work/przyklad1-cms/graphql";
+const API_ENDPOINT = "http://przyklad1cms.pabich.cc/graphql";
 
 async function fetchGraphQL(query) {
   return fetch(
