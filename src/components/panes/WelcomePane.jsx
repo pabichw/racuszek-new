@@ -19,13 +19,13 @@ const WelcomePane = ({page}) => {
             <Content>
                 <Left>
                     <Fade left cascade>
-                        <div>
+                        <TextWrapper>
                             <Title>{stripHTML(title)}</Title>
                             <Subtitle>{stripHTML(subtitle)}</Subtitle>
                             <ButtonWrapper>
                                 <Button withArrowIcon>Zobacz</Button>
                             </ButtonWrapper>
-                        </div>
+                        </TextWrapper>
                     </Fade>
                 </Left>
                 <Right>
@@ -49,18 +49,19 @@ const Content = styled.header`
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 50px);
+  margin: 0 25px;
   height: calc(100vh - ${NAV.height});
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     flex-direction: column;
     margin-top: 3r5px;
+    margin: 0 10px;
   }
 `;
 
 const Left = styled.div`
   margin-right: 100px;
-  
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     margin-right: 0;
   }
@@ -72,6 +73,9 @@ const Right = styled.div`
   }
 `;
 
+const TextWrapper = styled.article`
+  max-width: 900px;
+`;
 const Title = styled.h1`
   font-family: LilyScriptOne;
   font-size: 50px;
@@ -88,6 +92,7 @@ const Subtitle = styled.h3`
   font-size: 16px;
   margin-top: 34px;
   line-height: 1.6em;
+  font-weight: normal;
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     text-align: center;

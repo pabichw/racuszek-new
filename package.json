@@ -8,7 +8,7 @@
     "email": "pabichwiktor@gmail.com"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "export": "yarn && yarn build && next export"
@@ -22,11 +22,13 @@
     "emotion-theming": "^10.0.27",
     "graphql": "^15.4.0",
     "graphql-request": "^3.3.0",
+    "leaflet": "^1.7.1",
     "next": "^10.0.2",
     "react": "^16.13.1",
     "react-addons-css-transition-group": "^15.6.2",
     "react-burger-menu": "^2.9.0",
     "react-dom": "^16.13.1",
+    "react-leaflet": "^3.0.2",
     "react-paginate": "^6.5.0",
     "react-reveal": "^1.2.2",
     "sass": "^1.29.0",
