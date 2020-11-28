@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import React from "react"
+import "../public/fonts/fonts.scss"
 
 const GlobalStyle = createGlobalStyle`
   :root {
