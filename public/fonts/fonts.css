@@ -1,13 +1,16 @@
 @font-face {
+    font-display: swap;
     font-family: "LilyScriptOne";
     src: url("LilyScriptOne-Regular.ttf") format('truetype');
 }
 
 @font-face {
+    font-display: swap;
     font-family: "Montserrat";
     src: url("Montserrat-Regular.ttf") format('truetype');
 }
 @font-face {
+    font-display: swap;
     font-family: "Montserrat";
     src: url("Montserrat-Bold.ttf") format('truetype');
     font-weight: bold;
