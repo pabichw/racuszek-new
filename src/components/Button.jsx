@@ -11,7 +11,6 @@ const Button = ({withArrowIcon, children}) => {
 };
 
 const CustomButton = styled.button`
-
   -webkit-appearance: none;
   -moz-appearance: none;
   text-decoration: none;
@@ -20,7 +19,7 @@ const CustomButton = styled.button`
   position: relative;
   width: auto;
   padding: 0 65px;
-  height: 67px;
+  height: 100%;
   border-radius: 57px;
   background: var(--primary);
   color: white;

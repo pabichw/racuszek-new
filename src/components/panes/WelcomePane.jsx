@@ -130,6 +130,7 @@ const ButtonWrapper = styled.div`
   text-align: center;
   display: flex;
   justify-content: flex-start;
+  height: 67px;
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     justify-content: center;
@@ -139,7 +140,7 @@ const ButtonWrapper = styled.div`
 
 const ScrollIncentWrapper = styled.div`
   position: absolute;
-  bottom: 10px;
+  bottom: 60px;
   height: 65px;
   width: 100px;
   left: 50%;

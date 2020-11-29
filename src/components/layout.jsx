@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <Wrap id='page-wrap'>
       <TopBar/>
       {children}
-      <Footer scrolledToTop={true}/>
+      <Footer scrolledToTop={false}/>
     </Wrap>
   )
 }

@@ -16,11 +16,11 @@ const Footer = ({scrolledToTop}) => (
       {!scrolledToTop && <Content>
         <div/>
         <Link href="#">
-          <a>
+          <A>
             <LogoWrapper>
               <Logo white/>
             </LogoWrapper>
-          </a>
+          </A>
         </Link>
       </Content>}
     </CSSTransitionGroup>
@@ -48,6 +48,11 @@ const LogoWrapper = styled.div`
   position: relative;
   width: 150px;
   zoom: 0.8; // !!!!
+`;
+
+const A = styled.a`
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 export default Footer;
