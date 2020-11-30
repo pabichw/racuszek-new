@@ -51,7 +51,7 @@ const Content = styled.header`
   align-items: center;
   width: calc(100% - 50px);
   margin: 0 25px;
-  height: calc(100vh - ${NAV.height});
+  min-height: calc(100vh - ${NAV.height});
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     flex-direction: column;

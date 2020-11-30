@@ -2,39 +2,53 @@ import React from 'react';
 import styled from "styled-components";
 import {BREAKPOINTS, NAV} from "../../utils/styling";
 import Pane from "../Pane";
+import PhotoGallery from "../PhotoGallery"
 
-const OfferPane = () => {
-    return (
-        <Pane id='offer' customStyle={`background: #fff;`}>
-            <Content>
-                <Title>Hello</Title>
-            </Content>
-        </Pane>
-    );
+const OfferPane = ({ page, media }) => {
+  const { content, title } = page
+  console.log('media', media);
+  return (
+    <Pane id='offer' customStyle={`background: #fff;`}>
+      <Content>
+        <Title>{title}</Title>
+        <Article dangerouslySetInnerHTML={{__html: content}}/>
+        <PhotoGridWrap>
+          <PhotoGallery images={media} srcPath="mediaItemUrl" altPath="description" />
+        </PhotoGridWrap>
+      </Content>
+    </Pane>
+  );
 };
 
-const Content = styled.header`
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
+const Content = styled.div`
   width: 100%;
-  height: calc(100vh - ${NAV.height});
+  min-height: calc(100vh - ${NAV.height});
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     flex-direction: column;
-    margin-top: 3r5px;
+    margin-top: 35px;
   }
 `;
 
 const Title = styled.h1`
   font-family: LilyScriptOne;
   font-size: 50px;
+  padding-left: 48px;
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     text-align: center;
     font-size: 32px;
   }
 `
+
+const Article = styled.article`
+  width: 100%;
+  padding: 35px 60px 35px;
+`;
+
+const PhotoGridWrap = styled.div`
+  padding: 0 60px;
+`;
+
 
 export default OfferPane;

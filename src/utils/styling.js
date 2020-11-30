@@ -44,6 +44,10 @@ export const animateUnderlineHover = ({color, width}) => `
     }
 `
 
+const camelToKebabCase = str => str.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
+
+export const reactPropsStylingToCss = props => Object.keys(props).map(key => `${camelToKebabCase(key)}: ${props[key]};`).join('');
+
 export const NAV = {
   height: '50px',
 }

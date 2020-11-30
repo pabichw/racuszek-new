@@ -4,7 +4,7 @@ import {BREAKPOINTS, NAV} from "../../utils/styling";
 import Pane from "../Pane";
 import Map from "../GoogleMap"
 import ContactForm from "../forms/ContactForm"
-import Footer from "../Footer"
+import { Element } from 'react-scroll'
 
 const ContactPane = ({page}) => {
   const { content, title } = page
@@ -17,7 +17,9 @@ const ContactPane = ({page}) => {
   return (
     <Pane id='contact' customStyle={`background: var(--bckgPrimary);`}>
       <Content>
-        <Title>{title}</Title>
+        <Element name="content">
+          <Title>{title}</Title>
+        </Element>
         <Main>
           <Left>
             <ContactWrapper>
@@ -58,7 +60,7 @@ const Content = styled.article`
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: calc(100vh - ${NAV.height});
+  min-height: calc(100vh - ${NAV.height});
 
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     flex-direction: column;
@@ -80,10 +82,9 @@ const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 25px 0;
   width: 100%;
   height: 100%;
-  margin: 0 60px;
+  margin: 35px 60px 0;
 
   & > div {
     border-right: 1px solid #000;

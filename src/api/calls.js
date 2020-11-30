@@ -27,3 +27,20 @@ export async function getHome() {
   )
   return data
 }
+
+export async function getMedia() {
+  const {data} = await fetchGraphQL(
+    `
+      query Media {
+        mediaItems {
+          nodes {
+            title
+            description
+            uri
+            mediaItemUrl
+          }
+        }
+      }`
+  )
+  return data
+}
