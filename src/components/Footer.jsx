@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from "./Logo";
 import Link from 'next/link';
+import { BREAKPOINTS } from "../utils/styling"
 
 const Footer = () => (
   <Container>
@@ -72,6 +73,10 @@ const SocialWrapper = styled.div`
   padding-right: 40px;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    padding-right: 20px;
+  }
 `;
 
 const SocialIconWrapper = styled.div`
@@ -82,6 +87,11 @@ const SocialIconWrapper = styled.div`
   
   &:first-child {
     margin-left: 0;
+  }
+  
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    height: 24px;
+    width: 24px;
   }
 `;
 
