@@ -7,7 +7,7 @@ import PhotoGallery from "../PhotoGallery"
 const OfferPane = ({ page, media }) => {
   const { content, title } = page
   return (
-    <Pane id='offer' customStyle={`background: #fff;`}>
+    <Pane id='oferta' customStyle={`background: #fff;`}>
       <Content>
         <Title>{title}</Title>
         <Article dangerouslySetInnerHTML={{__html: content}}/>

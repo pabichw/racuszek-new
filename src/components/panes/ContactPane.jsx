@@ -15,7 +15,7 @@ const ContactPane = ({page}) => {
   console.log('content', content);
 
   return (
-    <Pane id='contact' customStyle={`background: var(--bckgPrimary);`}>
+    <Pane id='kontakt' customStyle={`background: var(--bckgPrimary);`}>
       <Content>
         <Element name="content">
           <Title>{title}</Title>
