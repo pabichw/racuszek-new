@@ -177,14 +177,9 @@ const MobileOption = styled.li`
 const LogoWrapper = styled.div`
   width: 200px;
   position: relative;
-  &:after {
-    content: '',
-    position: absolute;
-    left:0;
-    top: 0;
-    height: 9px;
-    width: 9px;
-    background: red;
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    width: 140px;
   }
 `
 

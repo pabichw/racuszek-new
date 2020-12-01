@@ -80,10 +80,10 @@ const Title = styled.h1`
 
 const Main = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 100%;
+  flex: 1;
   margin: 35px 60px 0;
 
   & > div {
@@ -100,10 +100,8 @@ const Main = styled.div`
 `;
 
 const Left = styled.div`
-  width: 50%;
-  max-height: 744px;
-  min-height: 80%;
-
+  height: 100%;
+  width: calc(50% - 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,10 +117,9 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: calc(50% - 110px);
-  max-height: 744px;
-  min-height: 80%;
-  padding: 0 55px;
+  height: 100%;
+  width: calc(50% - 60px);
+  padding-left: 60px;
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     align-items: flex-start;
@@ -165,7 +162,6 @@ const ContactChunkContent = styled.div`
 `;
 
 const ContactChunkLine = styled.p`
-  font-size: 28;
   line-height: 1.5em;
   position: relative;
   ${props => props.icon && `padding-left: 27px;`}

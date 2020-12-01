@@ -6,7 +6,6 @@ import PhotoGallery from "../PhotoGallery"
 
 const OfferPane = ({ page, media }) => {
   const { content, title } = page
-  console.log('media', media);
   return (
     <Pane id='offer' customStyle={`background: #fff;`}>
       <Content>
@@ -42,7 +41,6 @@ const Title = styled.h1`
 `
 
 const Article = styled.article`
-  width: 100%;
   padding: 35px 60px 35px;
 `;
 

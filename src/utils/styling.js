@@ -48,6 +48,38 @@ const camelToKebabCase = str => str.replace(/[A-Z]/g, letter => `-${letter.toLow
 
 export const reactPropsStylingToCss = props => Object.keys(props).map(key => `${camelToKebabCase(key)}: ${props[key]};`).join('');
 
+
+export class Animation {
+  static toGrayscale() {
+    return `
+      animation: toWhite 1s ease forwards;
+  
+      @keyframes toWhite {
+        0% {
+          filter: grayscale(0%);
+        } 100% {
+          filter: grayscale(100%);
+        }
+      }
+    `
+  }
+
+  static toGrayscaleBack() {
+    return `
+      animation: toWhiteBack 1s ease forwards;
+  
+      @keyframes toWhiteBack {
+        0% {
+          filter: grayscale(100%);
+        } 100% {
+          filter: grayscale(0%);
+        }
+      }
+    `
+  }
+}
+
+
 export const NAV = {
   height: '50px',
 }

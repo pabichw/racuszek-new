@@ -15,7 +15,7 @@ const PhotoGallery = ({images, srcPath, altPath}) => {
       setPhotoIdx(idx)
     }
   }
-  console.log('images', images, 'photoIdx', photoIdx);
+
   if (isEmpty(images)) return null;
   return (
     <>
@@ -49,7 +49,6 @@ const PhotoGallery = ({images, srcPath, altPath}) => {
   )
 }
 
-
 const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -58,9 +57,17 @@ const PhotoGrid = styled.div`
 `;
 
 const PhotoWrap = styled.div`
-  background: red;
+  background: var(--bckgPrimary);
   cursor: pointer;
-
+  overflow: hidden;
+  
+  border-radius: 3px;
+  transition: 0.6s;
+  
+  &:hover {
+    box-shadow: #131313 0 0 11px;
+  }
+  
   ${props => props.customStyle}
 `;
 
@@ -69,6 +76,12 @@ const Photo = styled.img`
 
   height: 100%;
   width: 100%;
+  
+  transition: 0.6s;
+  &:hover {
+    filter: grayscale(100%);
+    transform: scale(1.05);
+  }
 `;
 
 export default PhotoGallery
