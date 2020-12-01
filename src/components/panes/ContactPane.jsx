@@ -5,6 +5,7 @@ import Pane from "../Pane";
 import Map from "../GoogleMap"
 import ContactForm from "../forms/ContactForm"
 import { Element } from 'react-scroll'
+import Footer from "../Footer"
 
 const ContactPane = ({page}) => {
   const { content, title } = page
@@ -15,6 +16,7 @@ const ContactPane = ({page}) => {
   console.log('content', content);
 
   return (
+  <>
     <Pane id='contact' customStyle={`background: var(--bckgPrimary);`}>
       <Content>
         <Element name="content">
@@ -50,6 +52,8 @@ const ContactPane = ({page}) => {
         </Main>
       </Content>
     </Pane>
+    <Footer/>
+  </>
   );
 };
 
@@ -59,7 +63,6 @@ const Content = styled.article`
   position: relative;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
   min-height: calc(100vh - ${NAV.height});
 
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
@@ -73,8 +76,8 @@ const Title = styled.h1`
   width: fit-content;
 
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
-    text-align: center;
     font-size: 32px;
+    padding-left: 30px;
   }
 `
 
@@ -92,6 +95,7 @@ const Main = styled.div`
 
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     flex-direction: column;
+    margin: 35px 30px 0;
 
     & > div {
       border-right: none;
@@ -124,7 +128,7 @@ const Right = styled.div`
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     align-items: flex-start;
     width: 100%;
-    margin-top: 250px;
+    padding-left: 0px;
   }
 `
 
@@ -133,8 +137,11 @@ const ContactWrapper = styled.div`
 `;
 
 const ContactChunk = styled.div`
-  display: block;
   margin-bottom: 58px;
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    margin-bottom: 28px;
+  }
 `
 
 const Subtitle = styled.h4`
@@ -153,12 +160,19 @@ const Subtitle = styled.h4`
     left: 50%;
     transform: translateX(-50%);
     border-bottom: 1px solid #070707;
+  }
 
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    font-size: 17px;
   }
 `;
 
 const ContactChunkContent = styled.div`
   margin-top: 20px;
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    margin-top: 14px;
+  }
 `;
 
 const ContactChunkLine = styled.p`
@@ -175,6 +189,11 @@ const ContactChunkLine = styled.p`
     width: 18px;
     height: 18px;
     background: url(${props => props.icon});
+  }
+  
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    font-size: 14px;
+    line-height: 1.7em;
   }
 `;
 

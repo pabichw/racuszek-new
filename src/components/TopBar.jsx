@@ -9,11 +9,11 @@ import Link from 'next/link';
 const CallUs = () => (
   <CallWrapper>
     <Fade right>
-    <CallText>Zadzwoń:</CallText>
-    <PhoneWrap>
-      <PhoneIcon src={'images/phone.svg'}/>
-      <PhoneNumber href="tel:+48 123 123 21" >+48 123 123 21</PhoneNumber>
-    </PhoneWrap>
+      <CallText>Zadzwoń:</CallText>
+      <PhoneWrap>
+        <PhoneIcon src={'images/phone.svg'}/>
+        <PhoneNumber href="tel:+48 123 123 21" >+48 123 123 21</PhoneNumber>
+      </PhoneWrap>
     </Fade>
   </CallWrapper>
 )
@@ -23,6 +23,10 @@ const CallWrapper = styled.div`
   right: 26px;
   top: 5px;
   text-align: right;
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    right: 12px;
+  }
 `;
 
 const CallText = styled.p`
@@ -40,6 +44,9 @@ const PhoneWrap = styled.div`
 const PhoneIcon = styled.img`
   height: 1.2em;
   margin-right: 5px;
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    display: none;
+  }
 `;
 
 const PhoneNumber = styled.a`
@@ -47,6 +54,10 @@ const PhoneNumber = styled.a`
   line-height: 1.5em;
   text-decoration: none;
   font-size: 15px;
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    font-size: 12px;
+  }
 `;
 
 const TopBar = () => {
@@ -112,9 +123,9 @@ const MobileToggle = styled.div`
   position: fixed;
   top: 8px;
   left: 14px;
-  width: 38px;
-  height: 38px;
-  z-index: 999;
+  width: 28px;
+  height: 28px;
+  z-index: 1000;
   
   display: none;
   @media screen and (max-width: ${BREAKPOINTS.TABLET}) {
@@ -123,8 +134,8 @@ const MobileToggle = styled.div`
 `
 
 const BurgerIcon = styled.img`
-  width: 28px;
-  height: 28px;
+  width: 15px;
+  height: 15px;
 `
 
 const Nav = styled.nav`

@@ -8,16 +8,8 @@ export default function Layout({ children }) {
     <Wrap id='page-wrap'>
       <TopBar/>
       {children}
-      <Footer scrolledToTop={false}/>
     </Wrap>
   )
 }
 
-const Wrap = styled.div`
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  width: 100vw;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-`
+const Wrap = styled.div``

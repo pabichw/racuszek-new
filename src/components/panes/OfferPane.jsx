@@ -25,7 +25,7 @@ const Content = styled.div`
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     flex-direction: column;
-    margin-top: 35px;
+    margin-top: 15px;
   }
 `;
 
@@ -35,17 +35,26 @@ const Title = styled.h1`
   padding-left: 48px;
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
-    text-align: center;
     font-size: 32px;
+    padding-left: 30px;
+
   }
 `
 
 const Article = styled.article`
   padding: 35px 60px 35px;
+  
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    padding: 35px 30px 35px;
+  }
 `;
 
 const PhotoGridWrap = styled.div`
   padding: 0 60px;
+
+  @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
+    padding: 0 30px;
+  }
 `;
 
 

@@ -7,13 +7,11 @@ import ContactPane from "../src/components/panes/ContactPane"
 import { getHome, getMedia } from "../src/api/calls"
 
 export default function Home({pagesContent, mediaContent}) {
-
   const pages = pagesContent?.pages?.nodes;
   const mainPage = pages?.find(p => p.title === "Glowna")
   const contactPage = pages?.find(p => p.title === "Kontakt")
   const offerPage = pages?.find(p => p.title === "Oferta")
 
-  console.log('mediaContent', mediaContent);
   const media = mediaContent?.mediaItems?.nodes;
   const offerMedia = media?.filter(m => m.title.includes('oferta-'))
   return (

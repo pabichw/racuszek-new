@@ -33,10 +33,7 @@ const Footer = () => (
 );
 
 const Container = styled.div`
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  margin-top: 35px;
 `
 const Content = styled.footer`
   display: flex;

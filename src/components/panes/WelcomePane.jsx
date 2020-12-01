@@ -9,7 +9,6 @@ import { tagContent } from "../../utils/regex";
 import { stripHTML } from "../../utils/other";
 
 const WelcomePane = ({page}) => {
-    console.log('welcomepage', page);
     let title, subtitle;
     title = page?.content?.match(tagContent('h2'))[0]
     subtitle = page?.content?.match(tagContent('p'))[0]
@@ -55,8 +54,6 @@ const Content = styled.header`
   
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     flex-direction: column;
-    margin-top: 3r5px;
-    margin: 0 10px;
   }
 `;
 
@@ -140,7 +137,7 @@ const ButtonWrapper = styled.div`
 
 const ScrollIncentWrapper = styled.div`
   position: absolute;
-  bottom: 60px;
+  bottom: 20px;
   height: 65px;
   width: 100px;
   left: 50%;
