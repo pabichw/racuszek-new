@@ -14,6 +14,7 @@ export default function Home({pagesContent, mediaContent}) {
 
   const media = mediaContent?.mediaItems?.nodes;
   const offerMedia = media?.filter(m => m.title.includes('oferta-'))
+
   return (
     <Layout>
       <WelcomePane page={mainPage}/>
@@ -22,7 +23,6 @@ export default function Home({pagesContent, mediaContent}) {
     </Layout>
   )
 }
-
 
 export async function getStaticProps() {
   const pagesContent = await getHome();

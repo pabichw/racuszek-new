@@ -17,7 +17,7 @@ export async function getHome() {
   const {data} = await fetchGraphQL(
     `
       query HomePage {
-        pages(where: {author: 1}) {
+        pages {
           nodes {
             title
             content
@@ -26,6 +26,22 @@ export async function getHome() {
       }`
   )
   return data
+}
+
+export async function getAboutUs() {
+  const {data} = await fetchGraphQL(
+    `
+      query AboutUsPage {
+        pages {
+          nodes {
+            title
+            content
+          }
+        }
+      }`
+  )
+  const aboutPage = data?.pages.nodes.find(p => p.title === "O nas")
+  return aboutPage
 }
 
 export async function getMedia() {

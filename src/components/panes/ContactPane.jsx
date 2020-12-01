@@ -5,7 +5,6 @@ import Pane from "../Pane";
 import Map from "../GoogleMap"
 import ContactForm from "../forms/ContactForm"
 import { Element } from 'react-scroll'
-import Footer from "../Footer"
 
 const ContactPane = ({page}) => {
   const { content, title } = page
@@ -16,7 +15,6 @@ const ContactPane = ({page}) => {
   console.log('content', content);
 
   return (
-  <>
     <Pane id='contact' customStyle={`background: var(--bckgPrimary);`}>
       <Content>
         <Element name="content">
@@ -52,8 +50,6 @@ const ContactPane = ({page}) => {
         </Main>
       </Content>
     </Pane>
-    <Footer/>
-  </>
   );
 };
 
@@ -130,7 +126,7 @@ const Right = styled.div`
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     align-items: flex-start;
     width: 100%;
-    padding-left: 0px;
+    padding-left: 0;
   }
 `
 

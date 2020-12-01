@@ -40,11 +40,9 @@ const Label = styled.label`
 `;
 
 const TextInput = styled.input`
-  width: 100%;
   min-height: 26px;
   border-radius:4px;
   border: 1px #e0e0e0 solid;
-  width: 40%;
   padding: 0 5px;
 `;
 

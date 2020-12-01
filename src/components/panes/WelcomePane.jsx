@@ -73,6 +73,7 @@ const Right = styled.div`
 const TextWrapper = styled.article`
   max-width: 900px;
 `;
+
 const Title = styled.h1`
   font-family: LilyScriptOne;
   font-size: 50px;
@@ -80,7 +81,6 @@ const Title = styled.h1`
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     text-align: center;
     font-size: 32px;
-
   }
 `
 

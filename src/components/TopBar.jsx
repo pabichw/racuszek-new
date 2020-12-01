@@ -68,19 +68,19 @@ const TopBar = () => {
           <Nav>
             <Options>
               <Option>
-                <Link href="#offer"><a>Oferta</a></Link>
+                <Link href="/#oferta"><a>Oferta</a></Link>
               </Option>
               <Option>
-                <Link href="#about-us"><a>O nas</a></Link>
+                <Link href="/o-nas"><a>O nas</a></Link>
               </Option>
               <LogoWrapper>
                 <Logo/>
               </LogoWrapper>
               <Option>
-                <Link href="#contact"><a>Kontakt</a></Link>
+                <Link href="/#kontakt"><a>Kontakt</a></Link>
               </Option>
               <Option>
-                <Link href="#carrer"><a>Praca</a></Link>
+                <Link href="/praca"><a>Praca</a></Link>
               </Option>
             </Options>
           </Nav>
@@ -90,16 +90,16 @@ const TopBar = () => {
       <MobileToggle>
         <Menu customBurgerIcon={ <BurgerIcon src={'images/menu.svg'} /> } width={ 280 } pageWrapId="page-wrap" >
           <MobileOption>
-            <Link href="#offer"><a>Oferta</a></Link>
+            <Link href="/#oferta"><a>Oferta</a></Link>
           </MobileOption>
           <MobileOption>
-            <Link href="#about-us"><a>O nas</a></Link>
+            <Link href="/o-nas"><a>O nas</a></Link>
           </MobileOption>
           <MobileOption>
-            <Link href="#contact"><a>Kontakt</a></Link>
+            <Link href="/#kontakt"><a>Kontakt</a></Link>
           </MobileOption>
           <MobileOption>
-            <Link href="#carrer"><a>Pracuj</a></Link>
+            <Link href="/praca"><a>Pracuj</a></Link>
           </MobileOption>
         </Menu>
       </MobileToggle>
