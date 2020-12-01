@@ -64,7 +64,9 @@ const Content = styled.article`
   justify-content: flex-start;
   align-items: flex-start;
   min-height: calc(100vh - ${NAV.height});
-
+  
+  overflow-x: hidden;
+  
   @media screen and (max-width: ${BREAKPOINTS.MOBILE}) {
     flex-direction: column;
   }

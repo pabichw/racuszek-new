@@ -60,6 +60,7 @@ const TextAreaInput = styled.textarea`
 
 const ButtonWrapper = styled.div`
   width: 100px;
+  margin-bottom: 15px;
 `;
 
 export default ContactForm;
